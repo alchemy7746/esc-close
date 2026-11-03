@@ -1,0 +1,55 @@
+name: Bug report
+description: Report a compatibility or behavior problem
+title: "[Bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve EscClose. Please remove personal information from logs before posting.
+  - type: input
+    id: macos
+    attributes:
+      label: macOS version
+      placeholder: "Example: macOS 15.8.1"
+    validations:
+      required: true
+  - type: input
+    id: wechat
+    attributes:
+      label: WeChat version
+      placeholder: "Example: 4.2.0"
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Mac architecture
+      placeholder: "Apple Silicon or Intel"
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Open WeChat
+        2. Press Escape
+        3. ...
+    validations:
+      required: true
+  - type: textarea
+    id: logs
+    attributes:
+      label: Diagnostics log
+      description: Use “打开诊断日志” from the menu bar and paste relevant lines.
+      render: text
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Checklist
+      options:
+        - label: Accessibility permission is enabled for EscClose
+          required: true
+        - label: I am using the latest release
+          required: true
